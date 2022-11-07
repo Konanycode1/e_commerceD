@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content%}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="card">
+                <h3 class="card-header">{{produits.name}}</h3>
+                <div class="card-body">
+                    <h4>{{produits.price}} $</h4>
+                    <img src="{{produits.thumbnail.url}}" alt="{{produits.name}}" style="max-width: 300px;">
+                    <p>{{produits.description}}</p>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>{{produits.stock}} en stock</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

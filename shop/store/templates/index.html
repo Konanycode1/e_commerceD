@@ -2,4 +2,13 @@
 
 {% block content %}
 <h1>konanyShop</h1>
+<div class="container-fluid">
+    {% for produits in produits%}
+    <h2>{{produits.name}}</h2>
+    <img src="{{produits.thumbnail.url}}" alt="{{produits.name}}" style="max-width: 200px;">
+
+    <h5><a href="{{produits.get_absolute_url}}">voir l'article</a></h5>
+    {%endfor%}
+</div>
+
 {% endblock %}
