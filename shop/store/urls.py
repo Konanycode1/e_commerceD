@@ -3,10 +3,10 @@ from django.conf.urls.static import static
 
 from . import views
 from shop import settings
-
+app_name = "shop"
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('index', views.index, name='index'),
     path('produit/<str:slug>/', views.produit, name='produit'),
-    path('base/', views.base, name='base'),
+    path('', views.base, name='base'),
 
 ]

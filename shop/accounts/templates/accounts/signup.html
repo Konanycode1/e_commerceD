@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="container_fluid">
+<div class="container_fluid text-center d-flex justify-content-center w-200">
     
-        <form action="" method="POST">
+        <form action="" method="POST" class=" 
+        form-control">
+            {% csrf_token %}
             <div class="row text-center"></div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 text-center p-3 ">
                     <label for="username">Nom d'utilisateur</label>
-                    <input type="text" name="username" id="username">
+                    <input class="form-control"  type="text" name="username" id="username">
                 </div>
-                <div class="col-lg-12">
+                <div class="col-lg-12 text-center p-3 ">
                     <label for="password">Mot de passe</label>
-                    <input type="password" name="password" id="password">
+                    <input class="form-control"  type="password" name="password" id="password">
                 </div>
-                <div class=" col-lg-12 text-center">
-                    <button type="submit">s'inscrire</button>
+                <div class=" col-lg-12 text-center p-3">
+                    <button class="btn" type="submit">s'inscrire</button>
                 </div>
             </div>
         </form>

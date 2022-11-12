@@ -16,8 +16,8 @@ def index(request):
     return render(request, 'index.html',context)
 
 def produit(request, slug):
-    produit = get_object_or_404(Produit, slug=slug )
+    produits = get_object_or_404(Produit, slug=slug )
     context = {
-        "produits":produit
+        "produits":produits
     }
     return render(request, 'detail.html', context )
